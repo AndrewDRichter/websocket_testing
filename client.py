@@ -2,7 +2,7 @@ import asyncio
 import websockets
 
 async def teste(msg):
-    async with websockets.connect('ws://localhost:8000') as websocket:
+    async with websockets.connect('ws://localhost:8000/teste') as websocket:
         await websocket.send(msg)
         response = await websocket.recv()
         print(response)
